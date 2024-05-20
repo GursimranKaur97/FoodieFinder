@@ -27,3 +27,53 @@ npx parcel index.html
     npx parcel index.html(for dev) // npm run start OR npm start
     npx parcel bundle index.html (for prod) // npm run build
 - JSX- Javascript Syntax which is easier to create React elements
+
+
+# Modules
+
+ - Header
+  - Logo
+  - Nav Items
+- Body
+  - Search
+   - RestaurantContainer
+    - RestaurantCard
+       - Img
+       - Name of Res, Star Rating, Cuisine, Delivery Time
+ - Footer
+  - Copyright
+  - Links
+  - Address
+  - Contact
+
+
+# Two types of Export/Import
+
+ - Default Export/Import
+
+ export default <name of variable>;
+ import Component from "path";
+
+ - Named Export/Import
+
+ export const Component;
+ import {Component} from "path";
+
+
+# React Hooks
+(Normal JS utility functions)
+- useState() - Superpowerful State Variable in react
+Whenever a state variable updates React will re-render my component
+
+- useEffect()
+
+# Reconciliation Algorithm (React Fiber)
+- New way of finding the difference between Virtual DOM & then it'll update the actual DOM
+- Res-Container => 7 cards => Filtered out to 3 cards then it creates a Virtual DOM
+- Virtual DOM is a representation of actual DOM
+
+# React is fast because
+React is doing efficient DOM manipulation because it has a Virtual DOM
+
+# Shimmer UI
+Blank Dummy Cards which we show to user while our data is loading
