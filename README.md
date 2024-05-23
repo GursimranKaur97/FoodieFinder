@@ -77,3 +77,7 @@ React is doing efficient DOM manipulation because it has a Virtual DOM
 
 # Shimmer UI
 Blank Dummy Cards which we show to user while our data is loading
+
+# 2 types of Routing in web apps
+- Client Side Routing
+- Server Side Routing
