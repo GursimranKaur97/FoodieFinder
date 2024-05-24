@@ -6,6 +6,8 @@ npx parcel index.html
 //Create a server for us and will host our app on http://localhost:1234
 
 
+# React is a single page application
+
 # Parcel
 
 - Dev Build

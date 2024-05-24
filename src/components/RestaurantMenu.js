@@ -10,6 +10,15 @@ const RestaurantMenu = () => {
   useEffect(() => 
   {
     fetchMenu();
+
+    const timer = setInterval(() => {
+      console.log("RESTAURANT MENU SET INTERVAL CALLED")
+    }, 1000);
+
+    // unmounting phase it'll be called when we'll change our page
+    return () => {
+      clearInterval(timer)
+    }
   }, // Callback function(It will be called after our component has rendered)
   [] // Dependency Array
   ); 
