@@ -5,28 +5,20 @@ import { useParams } from "react-router-dom";
 
 const RestaurantMenu = () => {
   const [resInfo, setResInfo] = useState(null);
-  console.log('***RestaurantMenu Triggered*')
   const {resId} = useParams();
 
   useEffect(() => 
   {
-    console.log('****Use Effect Triggered')
     fetchMenu();
   }, // Callback function(It will be called after our component has rendered)
   [] // Dependency Array
   ); 
 
-  console.log('****hiiiii********')
   const fetchMenu = async () => {
     try{
-    console.log('******halo**********')
     const data = await fetch(MENU_API + resId);
-    console.log("**data*", data);
     const json = await data.json();
-    console.log("**helo**", json);
     setResInfo(json.data);
-    console.log("**card***", resInfo);
-    console.log("***info****", resInfo?.cards[2]?.card?.card?.info);
     } catch(error) {
         console.error('*****RestaurantMenu broke****', error)
     }
@@ -38,9 +30,7 @@ const RestaurantMenu = () => {
   const { name, cuisines, costForTwoMessage } =
     resInfo?.cards?.[2]?.card?.card?.info;
     const groupedCardIndex = resInfo?.cards?.length - 1;
-    console.log('****carddddddd******', resInfo?.cards?.[groupedCardIndex]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[0]?.card.card)
    const {itemCards } = resInfo?.cards?.[groupedCardIndex]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card;
-   console.log('*****itemCards****', itemCards)
 
   return (
     <div className="menu">

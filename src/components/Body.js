@@ -52,8 +52,6 @@ const Body = () => {
               const filteredRestaurant = listOfRestaurants.filter((res)=> {
                 return res?.info?.name.toLowerCase().includes(searchText.toLowerCase());
               })
-              console.log('**searchText***', searchText)
-              console.log('****filteredRestaurant*****', filteredRestaurant)
               setFilteredRestaurant(filteredRestaurant);
             }}
           >

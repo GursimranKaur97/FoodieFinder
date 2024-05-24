@@ -86,3 +86,12 @@ Blank Dummy Cards which we show to user while our data is loading
 - Link component don't refresh our whole page like anchor tag so it's more recommendable to use in React
 
 - Link is a wrapper over anchor tag
+
+
+# Two type of Component
+- Function Based Component
+ - useEffect
+    - Used to do API Call
+- Class Based Component
+  - componentDidMount()
+    - Used to do API Call
