@@ -81,3 +81,8 @@ Blank Dummy Cards which we show to user while our data is loading
 # 2 types of Routing in web apps
 - Client Side Routing
 - Server Side Routing
+
+# Link 
+- Link component don't refresh our whole page like anchor tag so it's more recommendable to use in React
+
+- Link is a wrapper over anchor tag

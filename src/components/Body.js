@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   // Local State Variable - Super powerful variable
@@ -75,7 +76,8 @@ const Body = () => {
       <div className="res-container">
         {filteredRestaurant.map(
           (restaurant, index) => (
-            <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
+            <Link key={restaurant?.info?.id}
+            to={"/restaurants/" + restaurant?.info?.id}><RestaurantCard resData={restaurant} /></Link>
           )
           // whenever we're looping over an element we need to provide key to identify the element uniquely, in case we don't provide the key then react we re-render all the restaurant cards as react will not know at what place we need to put the restaurant card so react cleans the container & render all the restaurant cards,
           // If we give key to each container react will know which container he has already rendered and in case new container will come in then react will add only the new container
