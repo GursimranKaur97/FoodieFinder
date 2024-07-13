@@ -97,3 +97,5 @@ Blank Dummy Cards which we show to user while our data is loading
 - Class Based Component
   - componentDidMount()
     - Used to do API Call
+
+# Tailwind CSS
