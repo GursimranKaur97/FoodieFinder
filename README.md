@@ -63,7 +63,7 @@ npx parcel index.html
 
 
 # React Hooks
-(Normal JS utility functions)
+(Normal JS utility functions which are given to us by React)
 - useState() - Superpowerful State Variable in react
 Whenever a state variable updates React will re-render my component
 
