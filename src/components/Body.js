@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withPromotedLabel} from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -12,7 +12,7 @@ const Body = () => {
   // Normal JS Variable
   // let listOfRestaurants = [];
 
-
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
   // Whenever state vairable update, react triggers a reconciliation cycle(re-renders the component)
   console.log("Body Triggered")
 
@@ -81,8 +81,17 @@ const Body = () => {
       <div className="flex flex-wrap">
         {filteredRestaurant.map(
           (restaurant, index) => (
-            <Link key={restaurant?.info?.id}
-            to={"/restaurants/" + restaurant?.info?.id}><RestaurantCard resData={restaurant} /></Link>
+            <Link 
+            key={restaurant?.info?.id}
+            to={"/restaurants/" + restaurant?.info?.id}
+            >
+              {
+              /** If the restaurant is promoted then add a promoted label to it*/
+              restaurant?.info?.promoted ? 
+              (<RestaurantCardPromoted resData={restaurant}/>) : 
+              (<RestaurantCard resData={restaurant} />)
+              }
+              </Link>
           )
           // whenever we're looping over an element we need to provide key to identify the element uniquely, in case we don't provide the key then react we re-render all the restaurant cards as react will not know at what place we need to put the restaurant card so react cleans the container & render all the restaurant cards,
           // If we give key to each container react will know which container he has already rendered and in case new container will come in then react will add only the new container
