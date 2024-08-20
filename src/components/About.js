@@ -23,7 +23,7 @@ class About extends Component {
         return (
             <div>
                 <h1>About Class Component</h1>
-                {/* <div>
+                {<div>
                     Logged In User
                     <UserContext.Consumer>
                         {({loggedInUser})=> 
@@ -32,7 +32,7 @@ class About extends Component {
                         </h1>)
                         }
                     </UserContext.Consumer>
-                </div> */}
+                </div>}
                 <h2>This is Namaste React Web Series</h2>
                 <UserClass name={"Gursimran"} location={"Chandigarh"} contact={"9999999999"}/>
             </div>
