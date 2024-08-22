@@ -115,3 +115,16 @@ It's fast, flexible, and reliable — with zero-runtime.
  - Unit Testing
  - Integration Testing
  - End to End Testing - e2e testing
+
+ # Setting up Testing in our app
+ - Install React Testing Library (npm install --save-dev @testing-library/react)
+ - Install Jest (npm i -D jest)
+ - Install Babel dependenciess (npm install --save-dev babel-jest @babel/core 
+@babel/preset-env)
+ - Configure Babel (babel.config.js)
+ - Configure parcel config file to disable default babel transpilation (.parcelrc)
+ - Jest configuration (npx jest --init)
+ - Install jsdom library (npm install --save-dev jest-environment-jsdom)
+ - Install @babel/preset-react - to make JSX work in test cases
+ - Install @babel/preset-react inside my babel config
+ - Install @testing-library/jest-dom
