@@ -128,3 +128,7 @@ It's fast, flexible, and reliable — with zero-runtime.
  - Install @babel/preset-react - to make JSX work in test cases
  - Install @babel/preset-react inside my babel config
  - Install @testing-library/jest-dom
+
+ # Run test cases
+  - npm run watch-test //jest --watch
+  - npm run test //jest

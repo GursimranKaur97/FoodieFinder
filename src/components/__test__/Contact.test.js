@@ -4,6 +4,21 @@ import "@testing-library/jest-dom";
 
 describe("Contact Us Page Test Cases", () => {
 
+  beforeAll(() => {
+    console.log("Before All");
+  })
+
+  beforeEach(() => {
+    console.log("Before Each");
+  })
+
+  afterAll(() => {
+    console.log("After All");
+  })
+
+  afterEach(() => {
+    console.log("After Each");
+  })
 // it and test are one and the same thing we can use anyone of those to write test case
   test("Should load contact us component", () => {
     render(<Contact />);
